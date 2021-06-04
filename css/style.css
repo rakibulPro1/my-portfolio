@@ -1,0 +1,217 @@
+
+/* header section start  */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+/* back to top button  */
+.back-to-top {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    display: none;
+}
+
+/* keyframes  */
+@keyframes shadow-pulse{
+    0%{
+        box-shadow:0 0 0 0px rgba(0,0,0,0.2);
+    }
+    100%{
+        box-shadow:0 0 0 20px  rgba(0,0,0,0);
+    }
+}
+
+@keyframes slide-heading{
+    0%{
+        transform: translateY(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-img{
+    0%{
+        transform: translatex(1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+@keyframes slide-para{
+    0%{
+        transform: translatex(-1000px);
+        opacity: 0;
+    }
+    100%{
+        transform: translatex(0);
+        opacity: 1;
+    }
+}
+/* media query  */
+/* media query  */
+@media (max-width: 767px){
+    
+    .about-btn{
+        text-align: center;
+    }
+    .navbar-nav{
+        text-align: center;
+    }
+    #header .header-btn{
+        text-align: right;     
+    }
+}
+@media (max-width: 1147px){
+    *{
+        margin: 0;
+        padding: 0;
+    }
+}
+/* full style  */
+.navbar .btn{
+    margin-left: 5px 20px;
+}
+body .btn{
+    padding: 5px 10px;
+    border: 1.5px solid gray;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    color: black; 
+    transition: 1s all ease-in-out;
+    animation: shadow-pulse 2s infinite;
+}
+/* body .btn:hover{
+    background-color: rgb(2, 34, 175) ;
+    color: white;
+    border: none;
+} */
+.navbar-toggler:focus{
+    outline: none;
+}
+/* header start  */
+#header{
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+}
+#header nav .navbar-brand{
+    
+    font-size: 24px;
+    font-weight: 700;
+    padding: 15px 0;
+    color:rgb(2, 34, 175); 
+} 
+#header .navbar-nav{
+  padding: 0px 20px;  
+}
+#header .nav-item{
+    padding: 0px 8px;
+    margin: 0px 5px;
+}
+#header .nav-item .nav-link{
+    font-size: 15px;
+    font-weight: 600;
+}
+#header .nav-item a:hover{
+    border-bottom: 1px solid black;  
+}
+/* #header .nav-item a:active{
+    border-bottom: 1px solid black;
+    color:rgb(2, 34, 175) ;  
+} */
+#header .nav-item a:focus{
+    border-bottom: 1px solid black;
+    color:rgb(2, 34, 175) ;
+}
+/* header section end  */
+/* main start  */
+#main .avatar img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 7px solid rgb(207, 197, 197);
+    animation-name: slide-heading;
+    animation-duration: 2s;
+    /* border: 7px solid rgb(231, 224, 224); */
+}
+#main .avatar-text{
+    animation-name: slide-para;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+#main .avatar-header{
+    font-size: 10;
+}
+#main .main-right img{
+    animation-name: slide-img;
+    animation-duration: 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: backwards;
+}
+/* main end  */
+/* service start  */
+
+#service .icon{
+    font-size: 35px;
+    color:rgb(2, 34, 175) ;
+}
+#service .column{
+    box-shadow:5px 10px 30px rgba(5, 4, 12, 0.205);
+    border-radius: 10px;
+}
+/* service end  */
+/* portfolio Arae start  */
+#portfolio .portfolio-images .portfolio-img{
+    padding: 10px;
+    border: 1.5px solid rgb(2, 34, 175);
+    border-radius: 8px;
+}
+/* portfoolio area end  */
+/* contact area start  */
+#contact .social-container{
+    margin: 20px 0;
+}
+#contact .social-container a{
+    border-radius: 20%;
+    margin: 0px 5px;
+    padding: 5px;
+    height: 40px;
+    width: 40px;
+    color: gray;
+}
+.form-group label{
+    font-weight: 600;
+    color: gray;
+}
+#contact .form-control:active{
+    outline: none;
+    border: none;
+}
+#contact .form-inp{
+    padding: 2px 10px;
+    width: 80%;
+    border: 1px solid gray;
+    border-radius: 3px;
+}
+/* contact area end  */
+/* footer area start  */
+#footer .social-container a{
+    border-radius: 20%;
+    margin: 0px 5px;
+    /* padding: 5px 0px; */
+    height: 40px;
+    width: 40px;
+    color: white;
+    font-size: 25px;
+}
+/* footer area end  */
+
